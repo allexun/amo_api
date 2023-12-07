@@ -14,7 +14,7 @@ class BulkCreateController extends AbstractController
     ) {
     }
 
-    #[Route('/api/bulk-create', name: 'api_bulk_create', methods: ['GET'])]
+    #[Route('/api/bulk-create', name: 'api_bulk_create', methods: ['POST'])]
     public function create(): JsonResponse
     {
         $count = $this->service->create1000Models();
